@@ -10,4 +10,12 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get("/portfolio", function(req, res) {
+  res.send("This is portfolio page");
+});
+
+app.get("/blog", function(req, res) {
+  res.send("This is blog page");
+});
+
 app.listen(process.env.PORT || 3000, function() {console.log("Server started at http://localhost:3000")});
