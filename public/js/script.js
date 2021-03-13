@@ -45,8 +45,6 @@ function windowScroll(e) {
         navbar.className = navbarClass + " d-none";
         goTop.className = "goTop btn btn-dark fixed-bottom ml-3 mb-2 rounded-circle shadow d-none";
     }
-
-    console.log(navbar.className);
 }
 
 $(document).ready(function () {
@@ -102,4 +100,37 @@ $(document).ready(function () {
         mainVid(id);
     });
 
+});
+
+// Script Google Form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbybrGlJZOJiqxnQCJQGZlLlfVC1chq7bPAbF9oxdMrTZrRXBcH4arSRHGKg-UfRY8cW/exec';
+
+const form = document.forms['adhywiranto44-contact-me'];
+const btnSend = document.querySelector(".btn-send");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+
+// ketika tombol submit diklik
+// tampilkan tombol loading, hilangkan tombol kirim
+btnLoading.classList.toggle("d-none");
+btnSend.classList.toggle("d-none");
+
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnSend.classList.toggle("d-none");
+
+        // tampilkan alert sukses
+        myAlert.classList.toggle("d-none");
+
+        form.reset();
+
+        console.log('Success!', response);
+    })
+    .catch(error => console.error('Error!', error.message));
 });

@@ -117,25 +117,13 @@
                     <div class="col-lg-8 col offset-lg-2">
                         <div class="card border-0 p-3">
                             <div class="card-body">
-                                <p class="card-text">Hello my name is Adhy Wiranto Sudjana, you can call me Adhy. I was born in april 4th, 1999 at Cirebon, Indonesia. I am an Intermediate Web Developer (both Front-End and Back-End).
+                                <p class="card-text text-justify">Hello my name is Adhy Wiranto Sudjana, you can call me Adhy. I was born in april 4th, 1999 at Cirebon, Indonesia. I am an Intermediate Web Developer (both Front-End and Back-End).
                                 <br><br>
                                 These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).
                                 Let me know if we can work together :)</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="col-md-6 order-md-2 mb-3">
-                        <div class="card border-0 bg-transparent">
-                            <img src="img/profile-2.webp" class="card-img-top w-50 rounded-circle mx-auto shadow-lg" alt="Adhy Wiranto" title="Who Am I">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="text-justify">Hello my name is Adhy Wiranto Sudjana, you can call me Adhy. I was born in april 4th, 1999 at Cirebon, Indonesia. I am an Intermediate Web Developer (both Front-End and Back-End).
-                        <br><br>
-                        These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).
-                        Let me know if we can work together :)</p>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -330,31 +318,42 @@
         </div>
     </div>
 
-    <!-- <div id="contactme" class="container">
+    <div id="contactme" class="container">
         <div class="row">
-            <div class="col-md align-self-center text-center order-md-2 mb-3">
+            <div class="col-md align-self-center text-center mb-3">
                 <h3 class="h4">Contact Me!</h3>
             </div>
-            <div class="col-md">
-                <form action="" method="POST">
-                    <div class="form-group mb-1">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="your name">
-                    </div>
-                    <div class="form-group form-check ml-3">
-                        <input type="checkbox" class="form-check-input" id="as_anonymous">
-                        <label class="form-check-label text-secondary" for="as_anonymous"><small>set as Anonymous</small></label>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+
+                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                    <strong>Yeay!</strong> The messages has been sent :)
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form name="adhywiranto44-contact-me">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="your name" required autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="your email (optional)">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="your email" required autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="mail_content" name="mail_content" rows="10" placeholder="share your thoughts"></textarea>
+                        <textarea class="form-control" id="messages" name="messages" rows="10" placeholder="share your thoughts" required autocomplete="off"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark w-100 font-weight-bold">Submit</button>
+                    <button type="submit" class="btn btn-dark w-100 font-weight-bold btn-send">Send</button>
+                    
+                    <button class="btn btn-dark w-100 font-weight-bold btn-loading d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <footer id="footer" class="pt-5 myFooter" style="margin-top: 140px;">
         <div class="container">

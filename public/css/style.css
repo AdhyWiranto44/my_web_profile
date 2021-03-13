@@ -208,7 +208,6 @@ ul.timeline:before {
     left: 29px;
     width: 2px;
     height: 100%;
-    z-index: 400;
 }
 
 ul.timeline li:before {
@@ -220,7 +219,6 @@ ul.timeline li:before {
     left: 22px;
     width: 15px;
     height: 15px;
-    z-index: 400;
 }
 
 #contactme button {
