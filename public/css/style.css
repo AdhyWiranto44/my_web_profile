@@ -141,35 +141,34 @@ iframe:hover {
 
 #portfolio .card-img-overlay {
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(56, 56, 56, 0.8);
     transition: 0.3s;
-    padding-top: 50%;
 }
 
 #portfolio .card-img-overlay:hover {
     opacity: 1;
 }
 
-#portfolio .card-img-overlay h5,
+/* #portfolio .card-img-overlay h5,
 #portfolio .card-img-overlay p,
 #portfolio .card-img-overlay a {
     transform: translateY(-4px);
     transition: 0.3s;
-}
+} */
 
-#portfolio .card-img-overlay:hover h5,
+/* #portfolio .card-img-overlay:hover h5,
 #portfolio .card-img-overlay:hover p,
 #portfolio .card-img-overlay:hover a {
     transform: translateY(2px);
-}
+} */
 
 #portfolio .card img {
     transition: 0.3s;
 }
 
-#portfolio .card:hover img {
+/* #portfolio .card:hover img {
     filter: blur(3px);
-}
+} */
 
 .btn {
     border-radius: 10px;
