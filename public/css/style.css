@@ -62,11 +62,11 @@ img {
 }
 
 a.nav-item {
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Segoe UI Bold", Arial, sans-serif;
 }
 
 a.nav-link {
-    color: #28292e !important;
+    color: #484a52 !important;
     transition: 0.3s;
 }
 
@@ -83,6 +83,7 @@ a.nav-link:hover {
     margin-top: 75px;
     margin-bottom: 75px;
     box-shadow: 0 25px 20px rgba(47, 82, 224, 0.3);
+    transition: .3s;
 }
 
 .jumbotronTitle {
@@ -288,6 +289,11 @@ footer .border-top {
         /* margin-bottom: -3px; */
         margin-top: 16px;
         margin-bottom: -18px;
+    }
+
+    .jumbotronImg:hover {
+        margin-top: 65px;
+        box-shadow: 0 35px 35px rgba(47, 82, 224, 0.2);
     }
 
     a.contactMe {
