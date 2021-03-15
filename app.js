@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.render(__dirname + '/index.ejs');
 });
 
 app.get("/portfolio", function(req, res) {

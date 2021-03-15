@@ -110,6 +110,7 @@ i.fa-chevron-down {
     /* background-color: #28292e; */
     background: linear-gradient(90deg, #0d30bb, #6476c7);
     /* background: -webkit-linear-gradient(rgb(73, 73, 73), rgb(31, 31, 31)); */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
