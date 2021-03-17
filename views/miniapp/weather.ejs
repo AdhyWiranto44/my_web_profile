@@ -1,9 +1,13 @@
 <%- include("../partials/header"); %>
 
-<form action="/miniapp/weather" method="post">
-  <label for="cityInput">City</label>
-  <input type="text" id="cityInput" name="cityName" placeholder="ex: Bandung">
-  <button type="submit">Go</button>
-</form>
+<div class="row">
+  <div class="col-md">
+    <form action="/miniapp/weather" method="post">
+      <label for="cityInput">City</label>
+      <input type="text" id="cityInput" name="cityName" placeholder="ex: Bandung">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</div>
 
 <%- include("../partials/footer"); %>
