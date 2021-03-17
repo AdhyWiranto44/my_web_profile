@@ -1,0 +1,12 @@
+<%- include("../partials/header"); %>
+
+<h1>COVID-19 Indonesia</h1>
+<h3>Terjangkit: <%= data.confirmed.value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") %> orang</h3>
+<h3>Sembuh: <%= data.recovered.value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") %> orang</h3>
+<h3>Meninggal: <%= data.deaths.value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") %> orang</h3>
+
+<p>Update terakhir: <%= data.lastUpdate %></p>
+
+<small>Sumber: <a href="https://github.com/mathdroid/covid-19-api">Mathdroid</a></small>
+
+<%- include("../partials/footer"); %>

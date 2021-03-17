@@ -1,0 +1,9 @@
+<%- include("../partials/header"); %>
+
+<form action="/miniapp/weather" method="post">
+  <label for="cityInput">City</label>
+  <input type="text" id="cityInput" name="cityName" placeholder="ex: Bandung">
+  <button type="submit">Go</button>
+</form>
+
+<%- include("../partials/footer"); %>
