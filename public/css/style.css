@@ -1,3 +1,4 @@
+/* Font faces */
 @font-face {
     font-family: "Segoe UI";
     src: url("../fonts/segoeui.woff2");
@@ -12,7 +13,11 @@
     font-family: "Work Sans";
     src: url("../fonts/WorkSans-Regular.woff2");
 }
+/* End of font faces */
 
+
+
+/* Other */
 body,
 html {
     background-color: #f9f9f9;
@@ -50,55 +55,13 @@ img {
     -o-user-drag: none;
 }
 
-.navbarOnScroll {
-    background-color: rgba(249, 249, 249, 0.5);
-    backdrop-filter: blur(10px);
-    filter: drop-shadow(0 3px 2px rgba(42, 45, 48, 0.1));
-    transition: 0.3s;
+.blogImg {
+    height: 150px;
+    width: 200px;
 }
 
-.navbar {
-    z-index: 1;
-}
-
-a.nav-item {
-    font-family: "Segoe UI Bold", Arial, sans-serif;
-}
-
-a.nav-link {
-    color: #484a52 !important;
-    transition: 0.3s;
-}
-
-a.nav-link:hover {
-    color: #2F52E0 !important;
-}
-
-.navbar-toggler:focus, .goTop:focus {
-    outline: none;
-}
-
-.jumbotronImg {
-    height: 380px;
-    margin-top: 75px;
-    margin-bottom: 75px;
-    box-shadow: 0 25px 20px rgba(47, 82, 224, 0.3);
-    transition: .3s;
-}
-
-.jumbotronTitle {
-    font-family: "Segoe UI Bold", Arial, sans-serif;
-    font-weight: bold;
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
-a.jumbotronArrow {
-    color:  #454655;
-}
-
-a.jumbotronArrow:hover {
-    color: #2F52E0;
+#blog .card {
+    background-color: #fcfcfc;
 }
 
 i.fa-chevron-down {
@@ -107,9 +70,7 @@ i.fa-chevron-down {
 
 .card i.fas {
     font-size: 100px;
-    /* background-color: #28292e; */
     background: linear-gradient(90deg, #0d30bb, #6476c7);
-    /* background: -webkit-linear-gradient(rgb(73, 73, 73), rgb(31, 31, 31)); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,51 +87,6 @@ iframe:hover {
     filter: drop-shadow(0 10px 8px rgba(28, 32, 35, 0.5));
 }
 
-/* #about img,
-#hobby img,
-#skill img,
-#portfolio img {
-    filter: drop-shadow(0 3px 2px rgba(28, 32, 35, 0.5));
-} */
-
-#hobby img,
-#portfolio img,
-#portfolio .card,
-#portfolio .card-img-overlay, iframe, .jumbotronImg, .card {
-    border-radius: 27px;
-}
-
-#portfolio .card-img-overlay {
-    opacity: 0;
-    background-color: rgba(56, 56, 56, 0.8);
-    transition: 0.3s;
-}
-
-#portfolio .card-img-overlay:hover {
-    opacity: 1;
-}
-
-/* #portfolio .card-img-overlay h5,
-#portfolio .card-img-overlay p,
-#portfolio .card-img-overlay a {
-    transform: translateY(-4px);
-    transition: 0.3s;
-} */
-
-/* #portfolio .card-img-overlay:hover h5,
-#portfolio .card-img-overlay:hover p,
-#portfolio .card-img-overlay:hover a {
-    transform: translateY(2px);
-} */
-
-#portfolio .card img {
-    transition: 0.3s;
-}
-
-/* #portfolio .card:hover img {
-    filter: blur(3px);
-} */
-
 .btn {
     border-radius: 10px;
 }
@@ -182,7 +98,6 @@ iframe:hover {
 .btn-dark {
     border: 0;
     background: linear-gradient(90deg, #2F52E0, #7891FB);
-    /* box-shadow: 0 3px 5px rgba(47, 82, 224, 0.5); */
     transition: .3s;
 }
 
@@ -222,17 +137,116 @@ ul.timeline li:before {
     height: 15px;
 }
 
-#contactme button {
-    padding: 12px 0;
-}
-
 #map {
     height: 400px;
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
 }
+/* End of other */
 
+
+/* Navbar */
+.navbarOnScroll {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(0 3px 2px rgba(42, 45, 48, 0.1));
+    transition: 0.3s;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+a.nav-item {
+    font-family: "Segoe UI Bold", Arial, sans-serif;
+}
+
+a.nav-link {
+    color: #484a52 !important;
+    transition: 0.3s;
+}
+
+a.nav-link::after {
+    transition: .3s;
+}
+
+a.nav-link:hover {
+    color: #2F52E0 !important;
+}
+
+.navbar-toggler:focus, .goTop:focus {
+    outline: none;
+}
+/* End of navbar */
+
+
+
+
+/* Jumbotron */
+.jumbotronImg {
+    height: 380px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    box-shadow: 0 25px 20px rgba(47, 82, 224, 0.3);
+    transition: .3s;
+}
+
+.jumbotronTitle {
+    font-family: "Segoe UI Bold", Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+a.jumbotronArrow {
+    color:  #454655;
+}
+
+a.jumbotronArrow:hover {
+    color: #2F52E0;
+}
+/* End of jumbotron */
+
+
+
+
+/* Portfolio and hobby */
+#hobby img,
+#portfolio img,
+#portfolio .card,
+#portfolio .card-img-overlay, iframe, .jumbotronImg, .card {
+    border-radius: 27px;
+}
+
+#portfolio .card-img-overlay {
+    opacity: 0;
+    background-color: rgba(56, 56, 56, 0.8);
+    transition: 0.3s;
+}
+
+#portfolio .card-img-overlay:hover {
+    opacity: 1;
+}
+
+#portfolio .card img {
+    transition: 0.3s;
+}
+/* End of portfolio and hobby */
+
+
+
+
+/* Contact me */
+#contactme button {
+    padding: 12px 0;
+}
+/* End of contact me */
+
+
+
+
+/* Footer */
 footer {
     color: #f9f9f9;
     background: linear-gradient(90deg, #2F52E0, #7891FB);
@@ -257,16 +271,13 @@ footer a:hover {
 footer .border-top {
     border-top-width: 3px !important;
 }
+/* End of footer */
 
-.blogImg {
-    height: 150px;
-    width: 200px;
-}
 
-#blog .card {
-    background-color: #fcfcfc;
-}
 
+
+
+/* Responsive design */
 @media (min-width: 1200px) {
     .blogTitle {
         margin-left: -40px;
@@ -282,13 +293,18 @@ footer .border-top {
         padding-left: 80px;
     }
 
-    a.nav-link:hover::after {
+    a.nav-link::after {
         content: "";
         display: block;
         border-bottom: 3px solid #2F52E0;
-        /* margin-bottom: -3px; */
         margin-top: 16px;
         margin-bottom: -18px;
+        transition: opacity .3s ease;
+        opacity: 0;
+    }
+
+    a.nav-link:hover::after {
+        opacity: 1;
     }
 
     .jumbotronImg:hover {
@@ -332,13 +348,6 @@ footer .border-top {
     }
 }
 
-@media (max-width: 600px) {
-    iframe {
-        width: 100%;
-        height: 240px;
-    }
-}
-
 @media (max-width: 768px) {
     .jumbotronImg {
         height: 200px;
@@ -352,3 +361,11 @@ footer .border-top {
         margin-bottom: 35px;
     }
 }
+
+@media (max-width: 600px) {
+    iframe {
+        width: 100%;
+        height: 240px;
+    }
+}
+/* End of responsive design */

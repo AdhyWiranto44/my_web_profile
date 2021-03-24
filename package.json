@@ -1,6 +1,6 @@
 {
   "name": "adhywiranto44",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remake adhywiranto44.github.io with backend features",
   "main": "app.js",
   "scripts": {
