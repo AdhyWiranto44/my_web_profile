@@ -2,16 +2,19 @@
 @font-face {
     font-family: "Segoe UI";
     src: url("../fonts/segoeui.woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Segoe UI Bold";
     src: url("../fonts/segoeuib.woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Work Sans";
     src: url("../fonts/WorkSans-Regular.woff2");
+    font-display: swap;
 }
 /* End of font faces */
 
@@ -185,7 +188,6 @@ a.nav-link:hover {
 
 /* Jumbotron */
 .jumbotronImg {
-    height: 380px;
     margin-top: 75px;
     margin-bottom: 75px;
     box-shadow: 0 25px 20px rgba(47, 82, 224, 0.3);

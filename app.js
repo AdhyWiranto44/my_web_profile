@@ -15,14 +15,6 @@ app.get("/", function(req, res) {
   res.render(__dirname + '/index.ejs');
 });
 
-app.get("/portfolio", function(req, res) {
-  res.send("This is portfolio page");
-});
-
-app.get("/blog", function(req, res) {
-  res.send("This is blog page");
-});
-
 app.get("/miniapp/weather", function(req, res){
   res.render("miniapp/weather", {title: "Weather"});
 });
@@ -65,9 +57,5 @@ app.get("/miniapp/covid-19", function(req, res){
     });
   });
 });
-
-app.get("/miniapp/my-youtube-channel", function(req, res){
-  res.send("this is my youtube channel mini-app");
-})
 
 app.listen(process.env.PORT || 3000, function() {console.log("Server started at http://localhost:3000")});
