@@ -70,3 +70,28 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message));
 });
+
+
+
+// Script mengganti tema
+const btnChangeTheme = document.querySelector(".btnChangeTheme");
+const html = document.querySelector("html");
+const hours = new Date().getHours();
+
+btnChangeTheme.addEventListener("click", function(event) {
+    if (html.dataset.colorMode === "light") {
+        html.dataset.colorMode = "dark";
+        btnChangeTheme.textContent = "Light Mode";
+    } else {
+        html.dataset.colorMode = "light";
+        btnChangeTheme.textContent = "Dark Mode";
+    }
+})
+
+if (hours > 16) {
+    html.dataset.colorMode = "dark";
+    btnChangeTheme.textContent = "Light Mode";
+} else {
+    html.dataset.colorMode = "light";
+    btnChangeTheme.textContent = "Dark Mode";
+}
