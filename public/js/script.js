@@ -88,10 +88,10 @@ btnChangeTheme.addEventListener("click", function(event) {
     }
 })
 
-if (hours > 16) {
-    html.dataset.colorMode = "dark";
-    btnChangeTheme.textContent = "Light Mode";
-} else {
+if (hours > 4 && hours < 16) {
     html.dataset.colorMode = "light";
     btnChangeTheme.textContent = "Dark Mode";
+} else {
+    html.dataset.colorMode = "dark";
+    btnChangeTheme.textContent = "Light Mode";
 }
