@@ -26,8 +26,9 @@
     --background-secondary: #fcfcfc;
     --text-primary: #28292e;
     --text-secondary: #55565b;
-    --theme-primary: #2044d1;
-    --theme-secondary: #6476c7;
+    --nav-link: #2C53E0;
+    --theme-primary: #2C53E0;
+    --theme-secondary: #7790FC;
     --navbar: rgba(255,255,255,0.5);
 }
 
@@ -36,8 +37,9 @@ html[data-color-mode="dark"] {
     --background-secondary: #1f2026;
     --text-primary: #ececec;
     --text-secondary: #cccccc;
-    --theme-primary: #18339c;
-    --theme-secondary: #47548f;
+    --nav-link: #ececec;
+    --theme-primary: #173B6E;
+    --theme-secondary: #1E497B;
     --navbar: rgba(36, 36, 36, 0.5);
 }
 /* End of mode */
@@ -149,7 +151,7 @@ iframe:hover {
 
 ul.timeline:before {
     content: '';
-    background: var(--theme-secondary);
+    background: var(--theme-primary);
     display: inline-block;
     position: absolute;
     left: 29px;
@@ -205,7 +207,7 @@ a.nav-link::after {
 }
 
 a.nav-link:hover {
-    color: var(--theme-primary) !important;
+    color: var(--nav-link) !important;
 }
 
 .navbar-toggler:focus, .goTop:focus {
@@ -336,7 +338,7 @@ footer .border-top {
     a.nav-link::after {
         content: "";
         display: block;
-        border-bottom: 3px solid var(--theme-primary);
+        border-bottom: 3px solid var(--nav-link);
         margin-top: 16px;
         margin-bottom: -18px;
         transition: opacity .3s ease;
