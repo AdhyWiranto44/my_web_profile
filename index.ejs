@@ -85,8 +85,8 @@
             
             <div class="col-md-6 offset-lg-1 jumbotronTitle">
                 <small class="mb-0">Hello,</small>
-                <h1>I Am Adhy</h1>
-                <p class="mb-2 font-weight-lighter">Full Stack Web Developer | College Student</p>
+                <h1>I Am <%= data.nickname %></h1>
+                <p class="mb-2 font-weight-lighter"><%= data.job %></p>
                 <% data.social_media.forEach(socmed => { %>
                     <a href="<%= socmed.link %>" class="h4 mx-1 text-secondary" title="<%= socmed.title %>"><i class="<%= socmed.icon %>"></i></a>    
                 <% }) %>
