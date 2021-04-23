@@ -23,16 +23,16 @@ function windowScroll(e) {
     const navbar = document.querySelector(".navbar");
     const goTop = document.querySelector(".goTop");
     const navbarClass = "navbar navbar-expand-lg navbar-light fixed-top";
-    const goTopClass = "goTop btn btn-dark fixed-bottom ml-3 mb-2 rounded-circle shadow";
+    const goTopClass = "goTop btn btn-secondary fixed-bottom mr-3 mb-3 ml-auto border-0 shadow";
     let offset = window.pageYOffset;
 
     if (offset > 70) {
-        navbar.style.filter = "drop-shadow(0 3px 2px rgba(42, 45, 48, 0.1))";
-        navbar.style.backdropFilter = "blur(10px)";
+        navbar.style.filter = "drop-shadow(0 6px 4px rgba(0, 0, 0, 0.1))";
+        navbar.style.backgroundColor = "var(--background)";
         goTop.className = goTopClass;
     } else {
         navbar.style.filter = "";
-        navbar.style.backdropFilter = "";
+        navbar.style.backgroundColor = "";
         goTop.className = goTopClass + " d-none";
     }
 }
@@ -77,23 +77,28 @@ form.addEventListener('submit', e => {
 
 // Script mengganti tema
 const btnChangeTheme = document.querySelector(".btnChangeTheme");
+const btnChangeThemeI = document.querySelector(".btnChangeTheme i");
 const html = document.querySelector("html");
 const hours = new Date().getHours();
 
 btnChangeTheme.addEventListener("click", function(event) {
     if (html.dataset.colorMode === "light") {
         html.dataset.colorMode = "dark";
-        btnChangeTheme.textContent = "Light Mode";
+        btnChangeTheme.className = "btnChangeTheme btn btn-outline-light btn-sm border-0 ml-3"
+        btnChangeThemeI.className = "fas fa-moon";
     } else {
         html.dataset.colorMode = "light";
-        btnChangeTheme.textContent = "Dark Mode";
+        btnChangeTheme.className = "btnChangeTheme btn btn-outline-dark btn-sm border-0 ml-3"
+        btnChangeThemeI.className = "far fa-moon";
     }
 })
 
 if (hours > 4 && hours < 16) {
     html.dataset.colorMode = "light";
-    btnChangeTheme.textContent = "Dark Mode";
+    btnChangeTheme.className = "btnChangeTheme btn btn-outline-dark btn-sm border-0 ml-3"
+    btnChangeThemeI.className = "far fa-moon";
 } else {
     html.dataset.colorMode = "dark";
-    btnChangeTheme.textContent = "Light Mode";
+    btnChangeTheme.className = "btnChangeTheme btn btn-outline-light btn-sm border-0 ml-3"
+    btnChangeThemeI.className = "fas fa-moon";
 }

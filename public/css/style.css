@@ -36,8 +36,8 @@ html[data-color-mode="dark"] {
     --background-secondary: #1f2026;
     --text-primary: #ececec;
     --text-secondary: #cccccc;
-    --theme-primary: #4764d6;
-    --theme-secondary: #6f85e9;
+    --theme-primary: #18339c;
+    --theme-secondary: #47548f;
     --navbar: rgba(36, 36, 36, 0.5);
 }
 /* End of mode */
@@ -61,7 +61,7 @@ h6 {
     font-weight: bold;
 }
 
-h5, h6 {
+h6 {
     color: var(--theme-primary);
 }
 
@@ -149,7 +149,7 @@ iframe:hover {
 
 ul.timeline:before {
     content: '';
-    background: #2F52E0;
+    background: var(--theme-secondary);
     display: inline-block;
     position: absolute;
     left: 29px;
@@ -173,6 +173,10 @@ ul.timeline li:before {
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
+}
+
+a.goTop {
+    background-color: rgba(85, 86, 91, .8);
 }
 /* End of other */
 
@@ -325,7 +329,7 @@ footer .border-top {
 
 @media (min-width: 992px) {
     .navbarLinks {
-        padding-left: 80px;
+        padding-left: 140px;
     }
 
     a.nav-link::after {
