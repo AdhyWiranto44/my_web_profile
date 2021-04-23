@@ -20,17 +20,19 @@ $(".nav-item, .goTop").on("click", function (e) {
 window.onscroll = windowScroll;
 
 function windowScroll(e) {    
-    const navbar = document.querySelector(".navbarOnScroll");
+    const navbar = document.querySelector(".navbar");
     const goTop = document.querySelector(".goTop");
-    const navbarClass = "navbarOnScroll navbar navbar-expand-lg navbar-light fixed-top";
+    const navbarClass = "navbar navbar-expand-lg navbar-light fixed-top";
     const goTopClass = "goTop btn btn-dark fixed-bottom ml-3 mb-2 rounded-circle shadow";
     let offset = window.pageYOffset;
 
     if (offset > 70) {
-        navbar.className = navbarClass;
+        navbar.style.filter = "drop-shadow(0 3px 2px rgba(42, 45, 48, 0.1))";
+        navbar.style.backdropFilter = "blur(10px)";
         goTop.className = goTopClass;
     } else {
-        navbar.className = navbarClass + " d-none";
+        navbar.style.filter = "";
+        navbar.style.backdropFilter = "";
         goTop.className = goTopClass + " d-none";
     }
 }
