@@ -3,6 +3,7 @@ const request = require('request');
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const https = require('https');
+const data = require('./data.js');
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  res.render(__dirname + '/index.ejs');
+  res.render(__dirname + '/index.ejs', {title: data.full_name, data, currentDate: new Date().getFullYear()});
 });
 
 app.get("/miniapp/weather", function(req, res){

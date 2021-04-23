@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Tab Icon -->
-    <link rel="icon" href="img/icon-3.webp">
+    <link rel="icon" href="img/<%= data.web_icon %>">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -29,7 +29,7 @@
       gtag('config', 'G-WKMHK9DESE');
     </script>
 
-    <title>Adhy Wiranto</title>
+    <title><%= data.full_name %></title>
 
 </head>
 
@@ -38,7 +38,7 @@
     <!-- Static navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href=""><img src="img/icon-3.webp" alt="AdhyW" title="AdhyW" width="36" height="36"></a>
+            <a class="navbar-brand" href=""><img src="img/<%= data.web_icon %>" alt="<%= data.full_name %>" title="AdhyW" width="36" height="36"></a>
             <button class="navbar-toggler border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- <img src="img/burger-expand-3.webp" alt="option" title="Expand Navigation" width="26"></span> -->
                 <div class="nav-menu" onclick="openNavMenu(this)">
@@ -80,18 +80,16 @@
         <div class="row">
             
             <div class="col-md-4 text-center order-md-2">
-                <img class="jumbotronImg" height="380" src="img/profile-3.webp" alt="Adhy Wiranto">
+                <img class="jumbotronImg" height="380" src="img/<%= data.photo %>" alt="Adhy Wiranto">
             </div>
             
             <div class="col-md-6 offset-lg-1 jumbotronTitle">
                 <small class="mb-0">Hello,</small>
                 <h1>I Am Adhy</h1>
                 <p class="mb-2 font-weight-lighter">Full Stack Web Developer | College Student</p>
-                <a href="https://www.linkedin.com/in/adhy-wiranto-665882155/" class="h4 mx-1 text-secondary" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/adhywiranto44" class="h4 mx-1 text-secondary" title="Github"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/wanindemilien" class="h4 mx-1 text-secondary" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.behance.net/skuukzkylxixsxa" class="h4 mx-1 text-secondary" title="Behance"><i class="fab fa-behance-square"></i></a>
-                <a href="https://www.youtube.com/channel/UCbdn7yqFCFXkU14eagNzqQQ" class="h4 mx-1 text-secondary" title="Youtube"><i class="fab fa-youtube"></i></a>
+                <% data.social_media.forEach(socmed => { %>
+                    <a href="<%= socmed.link %>" class="h4 mx-1 text-secondary" title="<%= socmed.title %>"><i class="<%= socmed.icon %>"></i></a>    
+                <% }) %>
                 <br>
                 <a href="#about" class="btn btn-dark nav-item mt-5 py-2">About me</a>
             </div>
@@ -112,9 +110,7 @@
                     <div class="col-lg-8 col offset-lg-2">
                         <div class="card border-0 p-3 shadow">
                             <div class="card-body">
-                                <p class="card-text text-justify">Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I was born in april 4th, 1999 at Cirebon, Indonesia. I am a Full Stack Web Developer.
-                                <br><br>
-                                These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).</p>
+                                <p class="card-text text-justify"><%= data.about_me %></p>
                             </div>
                         </div>
                     </div>
@@ -131,57 +127,45 @@
                 <h3 class="text-center h4">My Hobbies</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md">
-                <div class="card border-0 bg-transparent mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="img/hobby/coding.webp" class="card-img shadow" title="Photo bt Luca Bravo on Unsplash">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 pl-3 mt-2 mb-3">
-                                <h5 class="card-title">Coding & Web Design</h5>
-                                <p class="card-text">Find project inspirations, design using Figma</p>
+        <% data.hobbies.forEach((hobby, index) => { %>
+            <% if (index % 2 === 0) { %>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card border-0 bg-transparent mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-0 pl-3 mt-2 mb-3">
+                                        <h5 class="card-title"><%= hobby.heading %></h5>
+                                        <p class="card-text"><%= hobby.description %></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <div class=" card border-0 bg-transparent mb-3 float-right" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 order-md-2">
-                            <img src="img/hobby/music.webp" class="card-img shadow" title="Photo by Maurice Lourens on Unsplash">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 pr-md-3 pl-3 mt-2 mb-3 text-md-right">
-                                <h5 class="card-title">Music</h5>
-                                <p class="card-text">R&B music, K-POP, Lo-fi, and Pop.</p>
+            <% } else { %>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card border-0 bg-transparent mb-3 float-right" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 order-md-2">
+                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-0 pr-md-3 pl-3 mt-2 mb-3 text-md-right">
+                                        <h5 class="card-title"><%= hobby.heading %></h5>
+                                        <p class="card-text"><%= hobby.description %></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <div class=" card border-0 bg-transparent mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="img/hobby/gaming-2.webp" class="card-img shadow" title="Photo by Ammar ABU-ZAiD on Unsplash">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 pl-3 mt-2 mb-3">
-                                <h5 class="card-title">Gaming</h5>
-                                <p class="card-text">Minecraft and other casual games</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <% } %>
+        <% }) %>
     </div>
     <!-- End of hobby section -->
 
@@ -193,33 +177,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md mb-3">
-                <div class="card border-0 bg-transparent">
-                    <i class="fas fa-laptop-code text-center"></i>
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-1">Back-End & Front-End</h5>
-                        <p class="card-text">CodeIgniter | MySQL | Bootstrap | Node.js | MongoDB</p>
+            <% data.skills.forEach(skill => { %>
+                <div class="col-md mb-3">
+                    <div class="card border-0 bg-transparent">
+                        <i class="<%= skill.icon %> text-center"></i>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1"><%= skill.heading %></h5>
+                            <p class="card-text"><%= skill.description %></p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card border-0 bg-transparent">
-                    <i class="fas fa-layer-group text-center"></i>
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-1">UI/UX Design</h5>
-                        <p class="card-text">Figma</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card border-0 bg-transparent">
-                    <i class="fas fa-bezier-curve text-center"></i>
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-1">Others</h5>
-                        <p class="card-text">Adobe Premiere Pro | Adobe Photoshop | Ms. Word | Ms. Powerpoint</p>
-                    </div>
-                </div>
-            </div>
+                </div>    
+            <% }) %>
         </div>
     </div>
     <!-- End of skill section -->
@@ -232,46 +200,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <img src="img/portfolio/ikasma3bdg.webp" class="card-img-top" alt="ikasma3bdg">
-                    <div class="card-body">
-                        <h5 class="card-title">IKASMA3BDG</h5>
-                        <p class="card-text text-justify">Web yang berisi data para alumni dengan fitur berita, forum bisnis, dan komunitas.</p>
-                        <a class="btn btn-dark px-3" href="https://ikasma3bdg.com" target="blank">Visit</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <img src="img/portfolio/sound.webp" class="card-img-top" alt="GaweDong">
-                    <div class="card-body">
-                        <h5 class="card-title">SOUND</h5>
-                        <p class="card-text text-justify">Website E-Commerce CRUD yang menjual headphone dan earphone.</p>
-                        <a class="btn btn-dark px-3" href="https://github.com/AdhyWiranto44/sound" target="blank">Visit</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <img src="img/portfolio/gawedong.webp" class="card-img-top" alt="GaweDong">
-                    <div class="card-body">
-                      <h5 class="card-title">GaweDong</h5>
-                      <p class="card-text text-justify">Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020</p>
-                      <a class="btn btn-dark px-3" href="https://www.behance.net/gallery/115463817/UI-Design-GaweDong" target="blank">Visit</a>
+            <% data.portfolio.forEach(portfolio => { %>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/portfolio/<%= portfolio.img %>" class="card-img-top" alt="portfolio">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= portfolio.heading %></h5>
+                            <p class="card-text text-justify"><%= portfolio.description %></p>
+                            <a class="btn btn-dark px-3" href="<%= portfolio.link %>" target="blank">Visit</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <img src="img/portfolio/twice-api.webp" class="card-img-top" alt="TWICE API">
-                    <div class="card-body">
-                      <h5 class="card-title">TWICE API</h5>
-                      <p class="card-text text-justify">API yang menyediakan informasi seputar TWICE seperti member dan album</p>
-                      <a class="btn btn-dark px-3" href="http://twice-api-server.herokuapp.com/" target="blank">Visit</a>
-                    </div>
-                </div>
-            </div>
+            <% }) %>
         </div>
     </div>
     <!-- End of portfolio section -->
@@ -288,31 +228,26 @@
                 <div class="card bg-0 border-0 shadow" style="border-radius: 30px;">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col my-3">
+                      <div class="col-md my-3">
                         <h5 class="text-center mb-3">Education</h5>
                         <ul class="timeline position-relative">
-                          <li class="list-unstyled pl-3">
-                            <h6>August 2017 - Present</h6>
-                            <p>Informatics Engineering at
-                              Pasundan University, Bandung</p>
-                          </li>
-                          <li class="list-unstyled pl-3">
-                            <h6>July 2014 - May 2017</h6>
-                            <p>National Senior Highschool 2, Cirebon</p>
-                          </li>
+                            <% data.history.educations.forEach(education => { %>
+                                <li class="list-unstyled pl-3">
+                                    <h6><%= education.date %></h6>
+                                    <p><%= education.description %></p>
+                                </li>
+                            <% }) %>
                         </ul>
                       </div>
                       <div class="col-md my-3">
                         <h5 class="text-center mb-3">Work Experience</h5>
                         <ul class="timeline position-relative">
-                          <li class="list-unstyled pl-3">
-                            <h6>March 2020 - Present</h6>
-                            <p>Coordinator Lab. Assistant at Informatics Engineering at Pasundan University Bandung</p>
-                          </li>
-                          <li class="list-unstyled pl-3">
-                            <h6>September 2019 - Present</h6>
-                            <p>Laboratory Assistant at Informatics Engineering at Pasundan University, Bandung</p>
-                          </li>
+                            <% data.history.experiences.forEach(experience => { %>
+                                <li class="list-unstyled pl-3">
+                                    <h6><%= experience.date %></h6>
+                                    <p><%= experience.description %></p>
+                                </li>
+                            <% }) %>
                         </ul>
                       </div>
                     </div>
@@ -387,7 +322,7 @@
             </div>
             <div class="row pt-3 border-top border-light">
                 <div class="col-md-6 text-center text-md-left pb-3">
-                    <small class="mr-2">&#169; <%= new Date().getFullYear() %>. Made with &#10084; By Adhy Wiranto</small>
+                    <small class="mr-2">&#169; <%= currentDate %>. Made with &#10084; By <%= title %></small>
                 </div>
                 <div class="col-md-6 text-center text-md-right pb-3">
                     <a href="https://www.linkedin.com/in/adhy-wiranto-665882155/" class="h4 mx-1" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
