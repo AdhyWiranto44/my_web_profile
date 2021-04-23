@@ -325,11 +325,9 @@
                     <small class="mr-2">&#169; <%= currentDate %>. Made with &#10084; By <%= title %></small>
                 </div>
                 <div class="col-md-6 text-center text-md-right pb-3">
-                    <a href="https://www.linkedin.com/in/adhy-wiranto-665882155/" class="h4 mx-1" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/adhywiranto44" class="h4 mx-1" title="Github"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com/wanindemilien" class="h4 mx-1" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.behance.net/skuukzkylxixsxa" class="h4 mx-1" title="Behance"><i class="fab fa-behance-square"></i></a>
-                    <a href="https://www.youtube.com/channel/UCbdn7yqFCFXkU14eagNzqQQ" class="h4 mx-1 text-secondary" title="Youtube"><i class="fab fa-youtube"></i></a>
+                    <% data.social_media.forEach(socmed => { %>
+                        <a href="<%= socmed.link %>" class="h4 mx-1 text-secondary" title="<%= socmed.title %>"><i class="<%= socmed.icon %>"></i></a>    
+                    <% }) %>
                 </div>
             </div>
         </div>
