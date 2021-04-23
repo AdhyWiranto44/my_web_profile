@@ -180,6 +180,52 @@ ul.timeline li:before {
 a.goTop {
     background-color: rgba(85, 86, 91, .8);
 }
+
+/* --- */
+
+.nav-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--nav-link);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar1 {
+    width: 35px;
+}
+.bar2 {
+    width: 20px;
+    margin-left: 15px;
+}
+.bar3 {
+    width: 25px;
+    margin-left: 10px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-1px, 13px) ;
+    transform: rotate(-45deg) translate(-1px, 13px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px) ;
+    transform: rotate(45deg) translate(-6px, -6px) ;
+    width: 35px;
+}
+
 /* End of other */
 
 

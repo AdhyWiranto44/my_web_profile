@@ -102,3 +102,8 @@ if (hours > 4 && hours < 16) {
     btnChangeTheme.className = "btnChangeTheme btn btn-outline-light btn-sm border-0 ml-3"
     btnChangeThemeI.className = "fas fa-moon";
 }
+
+// Nav menu
+function openNavMenu(x) {
+    x.classList.toggle("change");
+}
