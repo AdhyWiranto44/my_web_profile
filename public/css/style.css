@@ -218,7 +218,8 @@ a.nav-link:hover {
 
 /* Jumbotron */
 #jumbotron {
-    padding: 70px 0 70px 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .jumbotronImg {
