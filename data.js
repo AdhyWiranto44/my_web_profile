@@ -71,16 +71,22 @@ const data = {
     ],
     "portfolio": [
         {
+            "img": "open-blog.webp",
+            "heading": "Open Blog",
+            "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
+            "link": "http://open-blog.herokuapp.com/"
+        },
+        {
+            "img": "twice-api.webp",
+            "heading": "TWICE API",
+            "description": "API yang menyediakan informasi seputar TWICE seperti member dan album",
+            "link": "http://twice-api-server.herokuapp.com/"
+        },
+        {
             "img": "ikasma3bdg.webp",
             "heading": "IKASMA3BDG",
             "description": "Web yang berisi data para alumni dengan fitur berita, forum bisnis, dan komunitas.",
             "link": "https://ikasma3bdg.com"
-        },
-        {
-            "img": "sound.webp",
-            "heading": "SOUND",
-            "description": "Website E-Commerce CRUD yang menjual headphone dan earphone.",
-            "link": "https://github.com/AdhyWiranto44/sound"
         },
         {
             "img": "gawedong.webp",
@@ -89,10 +95,10 @@ const data = {
             "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
         },
         {
-            "img": "twice-api.webp",
-            "heading": "TWICE API",
-            "description": "API yang menyediakan informasi seputar TWICE seperti member dan album",
-            "link": "http://twice-api-server.herokuapp.com/"
+            "img": "sound.webp",
+            "heading": "SOUND",
+            "description": "Website E-Commerce CRUD yang menjual headphone dan earphone.",
+            "link": "https://github.com/AdhyWiranto44/sound"
         },
     ],
     "history": {
