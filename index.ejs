@@ -67,7 +67,7 @@
     <!-- Go top button -->
     <div class="row">
         <div class="col">
-            <a class="goTop btn btn-secondary fixed-bottom mr-3 mb-3 ml-auto border-0 shadow d-none" href="#onTop"
+            <a class="goTop btn btn-secondary fixed-bottom mr-3 mb-3 ml-auto border-0 d-none" href="#onTop"
                 style="width: 50px; height: 50px;">
                 <i class="fas fa-chevron-up h4 pt-2"></i>
             </a>
@@ -80,7 +80,7 @@
         <div class="row">
             
             <div class="col-md-4 text-center order-md-2">
-                <img class="jumbotronImg" height="380" src="img/<%= data.photo %>" alt="Adhy Wiranto">
+                <img class="jumbotronImg shadow-lg bg-white" height="380" src="img/<%= data.photo %>" alt="Adhy Wiranto">
             </div>
             
             <div class="col-md-6 offset-lg-1 jumbotronTitle">
@@ -91,7 +91,7 @@
                     <a href="<%= socmed.link %>" class="h4 mx-1 text-secondary" title="<%= socmed.title %>"><i class="<%= socmed.icon %>"></i></a>    
                 <% }) %>
                 <br>
-                <a href="#about" class="btn btn-dark nav-item mt-5 py-2">About me</a>
+                <a href="#about" class="btn btn-dark nav-item mt-4 py-2">About me</a>
             </div>
         </div>
     </div>
@@ -103,7 +103,7 @@
             <div class="col-md">
                 <div class="row">
                     <div class="col-md">
-                        <h3 class="mb-4 text-center h4">About me</h3>
+                        <h3 class="mb-4 text-center">About me</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -124,7 +124,7 @@
     <div id="hobby" class="container" style="margin-bottom: 100px;">
         <div class="row mb-4">
             <div class="col-md">
-                <h3 class="text-center h4">My Hobbies</h3>
+                <h3 class="text-center">My Hobbies</h3>
             </div>
         </div>
         <% data.hobbies.forEach((hobby, index) => { %>
@@ -134,7 +134,7 @@
                         <div class="card border-0 bg-transparent mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
+                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow-lg" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body p-0 pl-3 mt-2 mb-3">
@@ -152,7 +152,7 @@
                         <div class="card border-0 bg-transparent mb-3 float-right" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4 order-md-2">
-                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
+                                    <img src="img/hobby/<%= hobby.img %>" class="card-img shadow-lg" title="Photo bt Luca Bravo on Unsplash" alt="hobby">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body p-0 pr-md-3 pl-3 mt-2 mb-3 text-md-right">
@@ -173,7 +173,7 @@
     <div id="skill" class="container mb-5">
         <div class="row mb-4">
             <div class="col-md text-center">
-                <h3 class="h4">My Skills</h3>
+                <h3>My Skills</h3>
             </div>
         </div>
         <div class="row">
@@ -196,7 +196,7 @@
     <div id="portfolio" class="container mb-5">
         <div class="row">
             <div class="col text-center mb-4">
-                <h3 class="h4">My Portfolio</h3>
+                <h3>My Portfolio</h3>
             </div>
         </div>
         <div class="row">
@@ -207,7 +207,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= portfolio.heading %></h5>
                             <p class="card-text text-justify"><%= portfolio.description %></p>
-                            <a class="btn btn-dark px-3" href="<%= portfolio.link %>" target="blank">Visit</a>
+                            <a class="btn btn-dark px-3 nav-item" href="<%= portfolio.link %>" target="blank">Show</a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
     <div id="history" class="container mb-5">
         <div class="row">
             <div class="col text-center mb-4">
-                <h3 class="h4">My History</h3>
+                <h3>My History</h3>
             </div>
         </div>
         <div class="row">
@@ -262,7 +262,7 @@
     <div id="contactme" class="container">
         <div class="row">
             <div class="col-md align-self-center text-center mb-3">
-                <h3 class="h4">Contact me!</h3>
+                <h3>Contact me!</h3>
             </div>
         </div>
         <div class="row">
@@ -277,9 +277,9 @@
                     <div class="form-group">
                         <textarea class="form-control shadow-sm" id="messages" name="messages" rows="10" placeholder="message" required autocomplete="off"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark w-100 font-weight-bold btn-send">Send</button>
+                    <button type="submit" class="btn btn-dark px-4 py-2 font-weight-bold btn-send">Send</button>
                     
-                    <button class="btn btn-dark w-100 font-weight-bold btn-loading d-none" type="button" disabled>
+                    <button class="btn btn-dark px-4 py-2 font-weight-bold btn-loading d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Loading...
                     </button>

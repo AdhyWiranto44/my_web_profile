@@ -23,16 +23,16 @@ function windowScroll(e) {
     const navbar = document.querySelector(".navbar");
     const goTop = document.querySelector(".goTop");
     const navbarClass = "navbar navbar-expand-lg navbar-light fixed-top";
-    const goTopClass = "goTop btn btn-secondary fixed-bottom mr-3 mb-3 ml-auto border-0 shadow";
+    const goTopClass = "goTop btn btn-secondary fixed-bottom mr-3 mb-3 ml-auto border-0";
     let offset = window.pageYOffset;
 
     if (offset > 70) {
         navbar.style.filter = "drop-shadow(0 6px 4px rgba(0, 0, 0, 0.1))";
-        navbar.style.backgroundColor = "var(--background)";
+        navbar.style.backgroundColor = "var(--background-secondary)";
         goTop.className = goTopClass;
     } else {
         navbar.style.filter = "";
-        navbar.style.backgroundColor = "";
+        navbar.style.backgroundColor = "var(--background)";
         goTop.className = goTopClass + " d-none";
     }
 }

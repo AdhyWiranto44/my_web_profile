@@ -1,4 +1,6 @@
 /* Font faces */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 @font-face {
     font-family: "Segoe UI";
     src: url("../fonts/segoeui.woff2");
@@ -22,24 +24,28 @@
 
 /* Mode */
 :root {
-    --background: #f9f9f9;
-    --background-secondary: #fcfcfc;
+    --background: #F3F5F8;
+    --background-secondary: #ffffff;
     --text-primary: #28292e;
     --text-secondary: #55565b;
-    --nav-link: #2C53E0;
-    --theme-primary: #2C53E0;
+    --hover-text-secondary: rgba(233, 233, 233, 0.5);
+    --nav-link: #3E55E9;
+    --theme-primary: #3E55E9;
     --theme-secondary: #7790FC;
+    --hover-theme-secondary: rgba(119, 144, 252, .5);
     --navbar: rgba(255,255,255,0.5);
 }
 
 html[data-color-mode="dark"] {
-    --background: #28292e;
-    --background-secondary: #1f2026;
+    --background: #1D1D42;
+    --background-secondary: #141432;
     --text-primary: #ececec;
     --text-secondary: #cccccc;
+    --hover-text-secondary:  #141432;
     --nav-link: #ececec;
-    --theme-primary: #173B6E;
-    --theme-secondary: #1E497B;
+    --theme-primary: #041A96;
+    --theme-secondary: #0057BF;
+    --hover-theme-secondary: rgba(4, 26, 150, .5);
     --navbar: rgba(36, 36, 36, 0.5);
 }
 /* End of mode */
@@ -59,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Segoe UI Bold", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -74,7 +80,7 @@ p {
 
 p,
 a {
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 img {
@@ -93,16 +99,13 @@ img {
     background-color: var(--background-secondary);
 }
 
-i.fa-chevron-down {
-    margin-top: 170px;
-}
-
-.card i.fas {
+#skill i {
     font-size: 100px;
-    background: linear-gradient(90deg, var(--theme-primary), var(--theme-secondary));
+    background: linear-gradient(45deg, var(--theme-primary), var(--theme-secondary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0px 4px var(--hover-theme-secondary));
 }
 
 iframe {
@@ -126,13 +129,14 @@ iframe:hover {
 
 .btn-dark {
     border: 0;
-    background: linear-gradient(90deg, var(--theme-primary), var(--theme-secondary));
+    background: linear-gradient(30deg, var(--theme-primary), var(--theme-secondary));
+    box-shadow: 0 4px 10px var(--hover-theme-secondary);
     transition: .3s;
 }
 
 .btn-dark:hover {
-    background: linear-gradient(90deg, var(--theme-primary), var(--theme-secondary));
-    box-shadow: 0 10px 20px rgba(47, 82, 224, 0.3);
+    background: linear-gradient(30deg, var(--theme-primary), var(--theme-secondary));
+    box-shadow: 0 10px 20px var(--hover-theme-secondary);
     transform: translateY(-3px);
 }
 
@@ -226,12 +230,17 @@ a.goTop {
     width: 35px;
 }
 
+.shadow {
+    box-shadow: 0 4px 8px var(--hover-text-secondary)!important;
+}
+
+.shadow-lg {
+    box-shadow: 0 6px 10px var(--hover-text-secondary)!important;
+}
 /* End of other */
 
 
 /* Navbar */
-/* .navbarOnScroll {
-} */
 
 .navbar {
     z-index: 1;
@@ -240,7 +249,9 @@ a.goTop {
 }
 
 a.nav-item {
-    font-family: "Segoe UI Bold", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: .9rem;
+    font-weight: bold;
 }
 
 a.nav-link {
@@ -277,7 +288,7 @@ a.nav-link:hover {
 }
 
 .jumbotronTitle {
-    font-family: "Segoe UI Bold", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     font-weight: bold;
     margin-top: 150px;
     margin-bottom: 150px;
@@ -320,7 +331,6 @@ a.nav-link:hover {
     transition: 0.3s;
 }
 /* End of portfolio and hobby */
-
 
 
 
@@ -393,11 +403,6 @@ footer .border-top {
 
     a.nav-link:hover::after {
         opacity: 1;
-    }
-
-    .jumbotronImg:hover {
-        margin-top: 65px;
-        box-shadow: 0 35px 35px rgba(47, 82, 224, 0.2);
     }
 
     a.contactMe {
