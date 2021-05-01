@@ -244,8 +244,8 @@ app.post("/admin/tambah-post-baru", upload.single('image'), (req, res) => {
   const title = req.body.title;
   const slug = title.replace(/\s+/g, '-').toLowerCase();
   const content = req.body.content;
-  const tags = req.body.tags.split(",");
-  const img = req.file.originalname;
+  const tags = req.body.tags.split(", ");
+  const img = req.file ? req.file.originalname : "";
 
   Post.findOne({title}, (err, foundPost) => {
       if (err) {
