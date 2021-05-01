@@ -43,9 +43,9 @@ html[data-color-mode="dark"] {
     --text-secondary: #cccccc;
     --hover-text-secondary:  #141432;
     --nav-link: #ececec;
-    --theme-primary: #041A96;
-    --theme-secondary: #0057BF;
-    --hover-theme-secondary: rgba(4, 26, 150, .5);
+    --theme-primary: #263bc4;
+    --theme-secondary: #5972e0;
+    --hover-theme-secondary: rgba(42, 67, 206, 0.8);
     --navbar: rgba(36, 36, 36, 0.5);
 }
 /* End of mode */
@@ -79,7 +79,7 @@ p {
 }
 
 p,
-a {
+a, button {
     font-family: "Montserrat", Arial, sans-serif;
 }
 
