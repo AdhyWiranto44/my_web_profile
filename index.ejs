@@ -38,7 +38,7 @@
     <!-- Static navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href=""><img src="img/<%= data.web_icon %>" alt="<%= data.full_name %>" title="AdhyW" width="36" height="36"></a>
+            <a class="navbar-brand" href="/"><img src="img/<%= data.web_icon %>" alt="<%= data.full_name %>" title="AdhyW" width="36" height="36"></a>
             <button class="navbar-toggler border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- <img src="img/burger-expand-3.webp" alt="option" title="Expand Navigation" width="26"></span> -->
                 <div class="nav-menu" onclick="openNavMenu(this)">
@@ -53,7 +53,7 @@
                     <a class="nav-item nav-link mx-2" href="#skill">Skill</a>
                     <a class="nav-item nav-link mx-2" href="#about">About</a>
                     <a class="nav-item nav-link mx-2" href="#history">History</a>
-                    <a class="nav-item nav-link mx-2" href="https://drive.google.com/drive/folders/1WKvKRcrMdh7_JgOnMgWJJNn8xLs0h8-b?usp=sharing">DL Dataset</a>
+                    <a class="nav-item nav-link mx-2" href="/posts">Posts</a>
                 </div>
                 <a class="nav-item nav-link mx-2" href="#contactme"><i class="fas fa-paper-plane mr-2"></i>Contact me!</a>
                 <button class="btnChangeTheme btn btn-outline-dark btn-sm border-0 ml-3 shadow-none">
@@ -322,7 +322,7 @@
             </div>
             <div class="row pt-3 border-top border-light">
                 <div class="col-md-6 text-center text-md-left pb-3">
-                    <small class="mr-2">&#169; <%= currentDate %>. Made with &#10084; By <%= title %></small>
+                    <small class="mr-2">&#169; <%= currentDate %>. Made with &#10084; By <%= data.full_name %></small>
                 </div>
                 <div class="col-md-6 text-center text-md-right pb-3">
                     <% data.social_media.forEach(socmed => { %>

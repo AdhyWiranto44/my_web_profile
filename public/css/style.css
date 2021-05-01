@@ -237,6 +237,10 @@ a.goTop {
 .shadow-lg {
     box-shadow: 0 6px 10px var(--hover-text-secondary)!important;
 }
+
+.card-img-top, .breadcrumb {
+    border-radius: 10px;
+}
 /* End of other */
 
 
@@ -337,6 +341,10 @@ a.nav-link:hover {
 /* Contact me */
 #contactme button {
     padding: 12px 0;
+}
+
+#contactme input {
+    color: var(--text-primary);
 }
 /* End of contact me */
 
