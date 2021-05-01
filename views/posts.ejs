@@ -86,7 +86,8 @@
                                 <%= new Date(post.created_at).getDate() %> 
                                 <%= arrMonth[new Date(post.created_at).getMonth()] %> 
                                 <%= new Date(post.created_at).getFullYear() %> 
-                                <%= new Date(post.created_at).getHours() %>.<%= new Date(post.created_at).getMinutes() %>
+                                <%= new Date(post.created_at).getHours() + new Date().getTimezoneOffset() / 60 %>.<%= new Date(post.created_at).getMinutes() %>
+                                <%=  %>
                             </small><br>
                             <div class="tag-list my-2">
                                 <% post.tags.forEach(tag => { %>
