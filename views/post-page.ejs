@@ -75,11 +75,9 @@
                       <div class="card-body px-0">
                         <h4 class="card-title mb-0"><%= post.title %></h4>
                         <small>
-                          <%= arrDay[new Date(post.created_at).getDay()] %>, 
                           <%= new Date(post.created_at).getDate() %> 
                           <%= arrMonth[new Date(post.created_at).getMonth()] %> 
                           <%= new Date(post.created_at).getFullYear() %> 
-                          <%= new Date(post.created_at).getHours() %>.<%= new Date(post.created_at).getMinutes() %>
                         </small><br>
                         <div class="tag-list my-2">
                           <% post.tags.forEach((tag) => { %>
