@@ -43,6 +43,7 @@ mongoose.connect(`mongodb+srv://adhywiranto44-admin:${process.env.DB_PASSWORD}@c
 mongoose.set("useCreateIndex", true);
 
 // mongodb://localhost:27017/${process.env.DB_NAME}
+// mongodb+srv://adhywiranto44-admin:${process.env.DB_PASSWORD}@cluster0.fpapq.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority
 
 // DB Schema
 const userSchema = new mongoose.Schema ({
