@@ -69,10 +69,8 @@
 
         <div class="row">
             <div class="col-md-3 order-md-2 mb-3">
-                <% posts.forEach(post => { %>
-                    <% post.tags.forEach((tag, index) => { %>
-                        <a class="text-dark" href="/tag/<%= tag %>"><span class="btn btn-sm btn-dark mb-2 px-2 mb-1">#<%= tag %></span></a>
-                    <% }) %>
+                <% tags.forEach(tag => { %>
+                    <a class="text-dark" href="/tag/<%= tag %>"><span class="btn btn-sm btn-dark mb-2 px-2 mb-1">#<%= tag %></span></a>
                 <% }) %>
             </div>
             <div class="col-md-9">
@@ -151,7 +149,7 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- My own script -->
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

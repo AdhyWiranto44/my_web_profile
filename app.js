@@ -39,7 +39,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(`mongodb+srv://adhywiranto44-admin:${process.env.DB_PASSWORD}@cluster0.fpapq.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 // mongodb://localhost:27017/${process.env.DB_NAME}
@@ -125,7 +125,26 @@ app.get("/posts", function(req, res) {
 
         res.redirect("/");
     } else {
-        res.render('posts', {title: "My Posts", data, currentDate: new Date().getFullYear(), tag: "", posts: foundPosts, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
+      Post.find({active: 1}, (err, foundForTags) => {
+        if (err) {
+          console.log(err);
+        } else {
+          // Push tag di setiap post ke array,
+          // Lalu hilangkan duplikat
+          let allTags = [];
+          foundForTags.forEach(post => {
+            post.tags.forEach(tag => {
+              allTags.push(tag);
+            })
+          })
+          function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+          }
+          
+          allTags = allTags.filter(onlyUnique);
+          res.render('posts', {title: "My Posts", data, currentDate: new Date().getFullYear(), tag: "", posts: foundPosts, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated(), tags: allTags});
+        }
+      });
     }
   }).sort({created_at: -1});
 })
@@ -137,7 +156,7 @@ app.get("/post/:postSlug", (req, res) => {
       if (err) {
           console.log(err);
       } else {
-          res.render("post-page", {title: foundPost.title, data, tag: "", currentDate: new Date().getFullYear(), post: foundPost, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
+        res.render("post-page", {title: foundPost.title, data, tag: "", currentDate: new Date().getFullYear(), post: foundPost, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
       }
   })
 })
@@ -149,7 +168,26 @@ app.get("/tag/:postTag", (req, res) => {
       if (err) {
           console.log(err);
       } else {
-          res.render("posts", {title: postTag, data, tag: postTag, currentDate: new Date().getFullYear(), posts: foundPosts, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
+        Post.find({active: 1}, (err, foundForTags) => {
+          if (err) {
+            console.log(err);
+          } else {
+            // Push tag di setiap post ke array,
+            // Lalu hilangkan duplikat
+            let allTags = [];
+            foundForTags.forEach(post => {
+              post.tags.forEach(tag => {
+                allTags.push(tag);
+              })
+            })
+            function onlyUnique(value, index, self) {
+              return self.indexOf(value) === index;
+            }
+            
+            allTags = allTags.filter(onlyUnique);
+            res.render("posts", {title: postTag, data, tag: postTag, currentDate: new Date().getFullYear(), posts: foundPosts, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated(), tags: allTags});
+          }
+        });
       }
   }).sort({created_at: -1})
 })
