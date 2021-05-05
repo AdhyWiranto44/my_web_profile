@@ -74,7 +74,7 @@ const data = {
             "img": "open-blog.webp",
             "heading": "Open Blog",
             "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
-            "link": "http://open-blog.herokuapp.com/"
+            "link": "https://github.com/AdhyWiranto44/open-blog/"
         },
         {
             "img": "twice-api.webp",
