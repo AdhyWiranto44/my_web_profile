@@ -58,6 +58,14 @@
     <!-- Post section -->
     <div class="container">
         <div class="row mt-3">
+            <div class="col mb-3">
+                <% tags.forEach(tag => { %>
+                    <a class="text-dark" href="/tag/<%= tag %>"><span class="btn btn-sm btn-dark mb-2 px-2 mb-1">#<%= tag %></span></a>
+                <% }) %>
+            </div>
+        </div>
+
+        <div class="row mt-3">
             <div class="col-md-9">
                 <% if (tag === "" && search === "") { %>
                     <h6>Latest Post</h6>
@@ -67,40 +75,37 @@
             </div>
         </div>
 
+
         <div class="row">
-            <div class="col-md-3 order-md-2 mb-3">
-                <% tags.forEach(tag => { %>
-                    <a class="text-dark" href="/tag/<%= tag %>"><span class="btn btn-sm btn-dark mb-2 px-2 mb-1">#<%= tag %></span></a>
-                <% }) %>
-            </div>
-            <div class="col-md-9">
-                <% posts.forEach(post => { %>
-                    <a href="/post/<%= post.slug %>">
-                        <div class="card px-3 mb-3 shadow border-0">
-                            <div class="card-body px-0">
-                            <a class="text-dark text-underline-dark" href="/post/<%= post.slug %>"><h4 class="card-title mb-0"><%= post.title %></h4></a>
-                            <small>
-                                <%= new Date(post.created_at).getDate() %> 
-                                <%= arrMonth[new Date(post.created_at).getMonth()] %> 
-                                <%= new Date(post.created_at).getFullYear() %> 
-                            </small><br>
-                            <div class="tag-list my-2">
-                                <% post.tags.forEach(tag => { %>
-                                    <a class="text-dark" href="/tag/<%= tag %>"><span class="badge badge-light p-2 mb-1">#<%= tag %></span></a>
-                                <% }) %>
-                            </div>
-                            <p class="card-text"><%= post.content.substring(0, 100) + "..." %><a href="/post/<%= post.slug %>">read more</a></p>
-                            </div>
-                        </div>
+            <% posts.forEach((post, index) => { %>
+                <% if (index === 0) { %>
+                    <div class="col-md-8 mb-3">
+                <% } else { %>
+                    <div class="col-md-4 mb-3">
+                <% } %>
+                
+                    <a class="text-dark text-underline-dark mt-3" href="/post/<%= post.slug %>">
+                        <h4 class="card-title mb-0 text-justify"><%= post.title %></h4>
                     </a>
-                <% }) %>
-            </div>
+                    <small>
+                        <%= new Date(post.created_at).getDate() %> 
+                        <%= arrMonth[new Date(post.created_at).getMonth()] %> 
+                        <%= new Date(post.created_at).getFullYear() %> 
+                    </small>
+                    <div class="tag-list my-2">
+                        <% post.tags.forEach(tag => { %>
+                            <a class="text-secondary" href="/tag/<%= tag %>"><span class="badge p-0 mr-2 mb-1">#<%= tag %></span></a>
+                        <% }) %>
+                    </div>
+                    <p class="text-justify overflow-hidden"><%= post.content.substring(0, 100) %>...<a href="/post/<%= post.slug %>">(more)</a></p>
+                </div>
+            <% }) %>
         </div>
     </div>
     <!-- End of post section -->
 
     <!-- Footer -->
-    <footer id="footer" class="pt-5 myFooter" style="margin-top: 140px;">
+    <footer id="footer" class="pt-5 myFooter" style="margin-top: 120px;">
         <div class="container">
             <div class="row pb-3">
                 <div class="col-md-3 mb-3">

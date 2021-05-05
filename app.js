@@ -39,7 +39,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(`mongodb+srv://adhywiranto44-admin:${process.env.DB_PASSWORD}@cluster0.fpapq.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 // mongodb://localhost:27017/${process.env.DB_NAME}
@@ -156,7 +156,13 @@ app.get("/post/:postSlug", (req, res) => {
       if (err) {
           console.log(err);
       } else {
-        res.render("post-page", {title: foundPost.title, data, tag: "", currentDate: new Date().getFullYear(), post: foundPost, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
+        Post.find({active: 1}, (err, foundPosts) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render("post-page", {title: foundPost.title, data, tag: "", currentDate: new Date().getFullYear(), otherPosts: foundPosts, currentPost: foundPost, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated()});
+          }
+        }).limit(5).sort({created_at: -1});
       }
   })
 })
