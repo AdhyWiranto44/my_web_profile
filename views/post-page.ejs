@@ -69,7 +69,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <% if (isAuthLink) { %>
                     <a class="btn btn-sm btn-danger mb-2" href="/admin/mengubah-post/<%= currentPost.slug %>"><i class="far fa-edit"></i> Ubah</a>
                 <% } %>
@@ -89,21 +89,25 @@
                     <%- currentPost.content %>
                 </p>
             </div>
-            <div class="col-lg-3 border-left">
+            <div class="col-lg-3 offset-lg-1">
                 <h6 class="mb-3">Other Posts</h6>
                 <% otherPosts.forEach(post => { %>
                     <% if (currentPost.slug !== post.slug) { %>
                         <div class="row">
                             <div class="col-lg">
-                                <a class="text-dark text-underline-dark" href="/post/<%= post.slug %>">
-                                    <h5 class="card-title mb-0 text-justify"><%= post.title %></h5>
-                                </a>
-                                <small>
-                                    <%= new Date(post.created_at).getDate() %> 
-                                    <%= arrMonth[new Date(post.created_at).getMonth()] %> 
-                                    <%= new Date(post.created_at).getFullYear() %> 
-                                </small>
-                                <p class="text-justify overflow-hidden"><%= post.content.substring(0, 50) %>...<a href="/post/<%= post.slug %>">(more)</a></p>
+                                <div class="card mb-3 border-0 shadow">
+                                    <div class="card-body">
+                                        <a class="text-dark text-underline-dark" href="/post/<%= post.slug %>">
+                                            <h5 class="card-title mb-0 text-justify"><%= post.title %></h5>
+                                        </a>
+                                        <small>
+                                            <%= new Date(post.created_at).getDate() %> 
+                                            <%= arrMonth[new Date(post.created_at).getMonth()] %> 
+                                            <%= new Date(post.created_at).getFullYear() %> 
+                                        </small>
+                                        <p class="text-justify overflow-hidden"><%= post.content.substring(0, 50) %>...<a href="/post/<%= post.slug %>">(more)</a></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <% } %>

@@ -75,29 +75,32 @@
             </div>
         </div>
 
-
+        
         <div class="row">
             <% posts.forEach((post, index) => { %>
                 <% if (index === 0) { %>
-                    <div class="col-md-8 mb-3">
+                    <div class="col-lg-8 mb-4">
                 <% } else { %>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-4 mb-4">
                 <% } %>
-                
-                    <a class="text-dark text-underline-dark mt-3" href="/post/<%= post.slug %>">
-                        <h4 class="card-title mb-0 text-justify"><%= post.title %></h4>
-                    </a>
-                    <small>
-                        <%= new Date(post.created_at).getDate() %> 
-                        <%= arrMonth[new Date(post.created_at).getMonth()] %> 
-                        <%= new Date(post.created_at).getFullYear() %> 
-                    </small>
-                    <div class="tag-list my-2">
-                        <% post.tags.forEach(tag => { %>
-                            <a class="text-secondary" href="/tag/<%= tag %>"><span class="badge p-0 mr-2 mb-1">#<%= tag %></span></a>
-                        <% }) %>
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <a class="text-dark text-underline-dark mt-3" href="/post/<%= post.slug %>">
+                                <h4 class="card-title mb-0 text-justify"><%= post.title %></h4>
+                            </a>
+                            <small>
+                                <%= new Date(post.created_at).getDate() %> 
+                                <%= arrMonth[new Date(post.created_at).getMonth()] %> 
+                                <%= new Date(post.created_at).getFullYear() %> 
+                            </small>
+                            <div class="tag-list my-2">
+                                <% post.tags.forEach(tag => { %>
+                                    <a class="text-secondary" href="/tag/<%= tag %>"><span class="badge p-0 mr-2 mb-1">#<%= tag %></span></a>
+                                <% }) %>
+                            </div>
+                            <p class="text-justify overflow-hidden"><%= post.content.substring(0, 100) %>...<a href="/post/<%= post.slug %>">(more)</a></p>
+                        </div>
                     </div>
-                    <p class="text-justify overflow-hidden"><%= post.content.substring(0, 100) %>...<a href="/post/<%= post.slug %>">(more)</a></p>
                 </div>
             <% }) %>
         </div>

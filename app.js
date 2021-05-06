@@ -144,7 +144,7 @@ app.get("/posts", function(req, res) {
           allTags = allTags.filter(onlyUnique);
           res.render('posts', {title: "My Posts", data, currentDate: new Date().getFullYear(), tag: "", posts: foundPosts, arrDay, arrMonth, search: "", isAuthLink: req.isAuthenticated(), tags: allTags});
         }
-      });
+      }).limit(5).sort({created_at: -1});
     }
   }).sort({created_at: -1});
 })
