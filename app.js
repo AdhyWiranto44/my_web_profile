@@ -289,7 +289,7 @@ app.get("/admin/tambah-post-baru", (req, res) => {
 
 app.post("/admin/tambah-post-baru", upload.single('image'), (req, res) => {
   const title = req.body.title;
-  const slug = title.replace(/\s+/g, '-').toLowerCase();
+  const slug = title.replace(/[^a-zA-Z0-9-. ]/g, "").replace(/\s+/g, '-').toLowerCase();
   const content = req.body.content;
   const tags = req.body.tags.split(", ");
   const img = req.file ? req.file.originalname : "";
