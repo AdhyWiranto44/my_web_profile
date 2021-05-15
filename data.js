@@ -2,7 +2,7 @@ const data = {
     "web_icon": "icon-3.webp",
     "nickname": "Adhy",
     "full_name": "Adhy Wiranto",
-    "job": "Full Stack Web Developer | College Student",
+    "job": "Backend Web Developer | College Student",
     "social_media": [
         {
             "link": "https://www.linkedin.com/in/adhy-wiranto-665882155/",
@@ -31,7 +31,7 @@ const data = {
         }
     ],
     "photo": "profile-3.webp",
-    "about_me": "Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I was born in april 4th, 1999 at Cirebon, Indonesia. I am a Full Stack Web Developer. These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).",
+    "about_me": "Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I was born in april 4<sup>th</sup> 1999 at Cirebon, Indonesia. I am a Backend Web Developer.<br><br>These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).",
     "hobbies": [
         {
             "img": "coding.webp",
@@ -61,7 +61,7 @@ const data = {
         {
             "icon": "fas fa-layer-group",
             "heading": "UI/UX Design",
-            "description": "Figma"
+            "description": "Figma | Adobe XD"
         },
         {
             "icon": "fas fa-bezier-curve",
@@ -71,28 +71,28 @@ const data = {
     ],
     "portfolio": [
         {
-            "img": "open-blog.webp",
+            "img": "findmyhobby.webp",
+            "heading": "Find My Hobby",
+            "description": "Find My Hobby merupakan website yang berisi daftar hobi dan rekomendasi hobi yang banyak digemari orang-orang.",
+            "link": "https://findmyhobby.adhywiranto.xyz/"
+        },
+        {
+            "img": "openblog.webp",
             "heading": "Open Blog",
             "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
             "link": "https://github.com/AdhyWiranto44/open-blog/"
         },
         {
-            "img": "twice-api.webp",
+            "img": "twiceapi.webp",
             "heading": "TWICE API",
             "description": "API yang menyediakan informasi seputar TWICE seperti member dan album",
-            "link": "http://twice-api-server.herokuapp.com/"
+            "link": "http://twice-api.adhywiranto.xyz/"
         },
         {
             "img": "ikasma3bdg.webp",
             "heading": "IKASMA3BDG",
             "description": "Web yang berisi data para alumni dengan fitur berita, forum bisnis, dan komunitas.",
             "link": "https://ikasma3bdg.com"
-        },
-        {
-            "img": "gawedong.webp",
-            "heading": "GaweDong",
-            "description": "Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020",
-            "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
         },
         {
             "img": "sound.webp",
