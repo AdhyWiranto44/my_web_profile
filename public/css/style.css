@@ -288,7 +288,6 @@ a.nav-link:hover {
 .jumbotronImg {
     margin-top: 75px;
     margin-bottom: 75px;
-    transition: .3s;
 }
 
 .jumbotronTitle {

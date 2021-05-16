@@ -12,6 +12,9 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -106,7 +109,7 @@
                         <h3 class="mb-4 text-center">About me</h3>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-up" data-aos-offset="200">
                     <div class="col-lg-8 col offset-lg-2">
                         <div class="card border-0 p-3 shadow">
                             <div class="card-body">
@@ -129,7 +132,7 @@
         </div>
         <% data.hobbies.forEach((hobby, index) => { %>
             <% if (index % 2 === 0) { %>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-offset="200">
                     <div class="col-md">
                         <div class="card border-0 bg-transparent mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
@@ -147,7 +150,7 @@
                     </div>
                 </div>
             <% } else { %>
-                <div class="row">
+                <div class="row" data-aos="fade-left" data-aos-offset="200">
                     <div class="col-md">
                         <div class="card border-0 bg-transparent mb-3 float-right" style="max-width: 540px;">
                             <div class="row no-gutters">
@@ -178,7 +181,7 @@
         </div>
         <div class="row">
             <% data.skills.forEach(skill => { %>
-                <div class="col-md mb-3">
+                <div class="col-md mb-3" data-aos="fade-up">
                     <div class="card border-0 bg-transparent">
                         <i class="<%= skill.icon %> text-center"></i>
                         <div class="card-body text-center">
@@ -201,7 +204,7 @@
         </div>
         <div class="row">
             <% data.portfolio.forEach(portfolio => { %>
-                <div class="col-xl-4 col-md-6 mb-4">
+                <div class="col-xl-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow border-0">
                         <img src="img/portfolio/<%= portfolio.img %>" class="card-img-top" alt="portfolio">
                         <div class="card-body">
@@ -223,12 +226,12 @@
                 <h3>My History</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-offset="300">
             <div class="col">
                 <div class="card bg-0 border-0 shadow" style="border-radius: 30px;">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-md my-3">
+                      <div class="col-md my-3" data-aos="fade-right" data-aos-delay="500">
                         <h5 class="text-center mb-3">Education</h5>
                         <ul class="timeline position-relative">
                             <% data.history.educations.forEach(education => { %>
@@ -239,7 +242,7 @@
                             <% }) %>
                         </ul>
                       </div>
-                      <div class="col-md my-3">
+                      <div class="col-md my-3" data-aos="fade-left" data-aos-delay="500">
                         <h5 class="text-center mb-3">Work Experience</h5>
                         <ul class="timeline position-relative">
                             <% data.history.experiences.forEach(experience => { %>
@@ -268,16 +271,16 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <form name="adhywiranto44-contact-me">
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-right">
                         <input type="text" class="form-control shadow-sm" id="name" name="name" placeholder="name" required autocomplete="off">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-right" data-aos-delay="50">
                         <input type="email" class="form-control shadow-sm" id="email" name="email" placeholder="email" required autocomplete="off">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-right" data-aos-delay="100">
                         <textarea class="form-control shadow-sm" id="messages" name="messages" rows="10" placeholder="message" required autocomplete="off"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark px-3 py-2 font-weight-bold btn-send">Send</button>
+                    <button type="submit" class="btn btn-dark px-3 py-2 font-weight-bold btn-send" data-aos="fade-right" data-aos-delay="150">Send</button>
                     
                     <button class="btn btn-dark px-3 py-2 font-weight-bold btn-loading d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -340,6 +343,18 @@
     <script src="vendor/jquery/jquery.easing.1.3.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        gsap.from("#jumbotron", {duration: .7, y: -100, opacity: 0, ease: "back", delay: .3});
+    </script>
 
     <!-- My own script -->
     <script src="js/script.js"></script>
