@@ -100,6 +100,12 @@ const data = {
             "description": "Website E-Commerce CRUD yang menjual headphone dan earphone.",
             "link": "https://github.com/AdhyWiranto44/sound"
         },
+        {
+            "img": "gawedong.webp",
+            "heading": "GaweDong",
+            "description": "Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020",
+            "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
+        },
     ],
     "history": {
         "educations": [
