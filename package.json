@@ -4,6 +4,7 @@
   "description": "Remake adhywiranto44.github.io with backend features",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adhy Wiranto",
