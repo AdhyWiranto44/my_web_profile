@@ -2,7 +2,7 @@ const data = {
     "web_icon": "icon-3.webp",
     "nickname": "Adhy",
     "full_name": "Adhy Wiranto",
-    "job": "Backend Web Developer | College Student",
+    "job": "Backend Developer | College Student",
     "social_media": [
         {
             "link": "https://www.linkedin.com/in/adhy-wiranto-665882155/",
@@ -36,8 +36,8 @@ const data = {
         {
             "img": "coding.webp",
             "title": "Photo bt Luca Bravo on Unsplash",
-            "heading": "Coding & Web Design",
-            "description": "Find project inspirations, design using Figma"
+            "heading": "Coding",
+            "description": "Find project inspirations, try something new"
         },
         {
             "img": "music.webp",
@@ -54,14 +54,14 @@ const data = {
     ],
     "skills": [
         {
-            "icon": "fas fa-laptop-code",
-            "heading": "Back-End & Front-End",
-            "description": "CodeIgniter | MySQL | Bootstrap | Node.js | MongoDB"
-        },
-        {
             "icon": "fas fa-layer-group",
             "heading": "UI/UX Design",
             "description": "Figma | Adobe XD"
+        },
+        {
+            "icon": "fas fa-laptop-code",
+            "heading": "Programming",
+            "description": "Node.js | PHP | Java | MongoDB | MySQL"
         },
         {
             "icon": "fas fa-bezier-curve",
@@ -74,13 +74,13 @@ const data = {
             "img": "findmyhobby.webp",
             "heading": "Find My Hobby",
             "description": "Find My Hobby merupakan website yang berisi daftar hobi dan rekomendasi hobi yang banyak digemari orang-orang.",
-            "link": "https://findmyhobby.adhywiranto.xyz/"
+            "link": "http://findmyhobby.adhywiranto.xyz/"
         },
         {
             "img": "openblog.webp",
             "heading": "Open Blog",
             "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
-            "link": "https://github.com/AdhyWiranto44/open-blog/"
+            "link": "http://github.com/AdhyWiranto44/open-blog/"
         },
         {
             "img": "twiceapi.webp",
