@@ -74,38 +74,96 @@ const data = {
             "img": "findmyhobby.webp",
             "heading": "Find My Hobby",
             "description": "Find My Hobby merupakan website yang berisi daftar hobi dan rekomendasi hobi yang banyak digemari orang-orang.",
-            "link": "http://findmyhobby.adhywiranto.xyz/"
+            "link": "http://findmyhobby.adhywiranto.xyz/",
+            "technology": [
+                {
+                    "title": "Node js",
+                    "icon": "fab fa-node-js"
+                },
+                {
+                    "title": "MongoDB",
+                    "icon": "fas fa-database"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
         },
         {
             "img": "openblog.webp",
             "heading": "Open Blog",
             "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
-            "link": "http://github.com/AdhyWiranto44/open-blog/"
+            "link": "http://github.com/AdhyWiranto44/open-blog/",
+            "technology": [
+                {
+                    "title": "Node js",
+                    "icon": "fab fa-node-js"
+                },
+                {
+                    "title": "MongoDB",
+                    "icon": "fas fa-database"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
         },
         {
             "img": "twiceapi.webp",
             "heading": "TWICE API",
             "description": "API yang menyediakan informasi seputar TWICE seperti member dan album",
-            "link": "http://twice-api.adhywiranto.xyz/"
+            "link": "http://twice-api.adhywiranto.xyz/",
+            "technology": [
+                {
+                    "title": "Node js",
+                    "icon": "fab fa-node-js"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
         },
         {
             "img": "ikasma3bdg.webp",
             "heading": "IKASMA3BDG",
             "description": "Web yang berisi data para alumni dengan fitur berita, forum bisnis, dan komunitas.",
-            "link": "https://ikasma3bdg.com"
+            "link": "https://ikasma3bdg.com",
+            "technology": [
+                {
+                    "title": "CodeIgniter",
+                    "icon": "fab fa-php"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
         },
         {
             "img": "sound.webp",
             "heading": "SOUND",
             "description": "Website E-Commerce CRUD yang menjual headphone dan earphone.",
-            "link": "https://github.com/AdhyWiranto44/sound"
+            "link": "https://github.com/AdhyWiranto44/sound",
+            "technology": [
+                {
+                    "title": "CodeIgniter",
+                    "icon": "fab fa-php"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
         },
-        {
-            "img": "gawedong.webp",
-            "heading": "GaweDong",
-            "description": "Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020",
-            "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
-        },
+        // {
+        //     "img": "gawedong.webp",
+        //     "heading": "GaweDong",
+        //     "description": "Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020",
+        //     "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
+        // },
     ],
     "history": {
         "educations": [

@@ -210,7 +210,12 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= portfolio.heading %></h5>
                             <p class="card-text text-justify"><%= portfolio.description %></p>
-                            <a class="btn btn-dark px-3 nav-item" href="<%= portfolio.link %>" target="blank">Show</a>
+                            <small class="text-muted d-block mb-1">Technology</small>
+                            <% portfolio.technology.forEach(tech => { %>
+                                <p class="h4 mr-1 d-inline" title="<%= tech.title %> " style="opacity: .5;"><i class="<%= tech.icon %> "></i></p>
+                            <% }) %>
+                            <br>
+                            <a class="btn btn-dark px-3 mt-3 nav-item" href="<%= portfolio.link %>" target="blank">Show</a>
                         </div>
                     </div>
                 </div>
