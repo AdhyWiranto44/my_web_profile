@@ -4,7 +4,8 @@
   "description": "Remake adhywiranto44.github.io with backend features",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node .",
+    "start-dev": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adhy Wiranto",
@@ -20,5 +21,8 @@
     "passport": "^0.4.1",
     "passport-local-mongoose": "^6.1.0",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
