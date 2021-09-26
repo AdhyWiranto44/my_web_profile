@@ -163,7 +163,7 @@ ul.timeline:before {
     height: 100%;
 }
 
-ul.timeline li:before {
+ul.timeline .list-unstyled:before {
     content: '';
     background: var(--theme-primary);
     display: inline-block;
