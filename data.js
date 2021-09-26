@@ -2,7 +2,7 @@ const data = {
     "web_icon": "icon-3.webp",
     "nickname": "Adhy",
     "full_name": "Adhy Wiranto",
-    "job": "Backend Developer | College Student",
+    "job": "Web Developer | Machine Learning Enthusiast",
     "social_media": [
         {
             "link": "https://www.linkedin.com/in/adhy-wiranto-665882155/",
@@ -23,15 +23,10 @@ const data = {
             "link": "https://www.behance.net/skuukzkylxixsxa",
             "title": "Behance",
             "icon": "fab fa-behance-square",
-        },
-        {
-            "link": "https://www.youtube.com/channel/UCbdn7yqFCFXkU14eagNzqQQ",
-            "title": "Youtube",
-            "icon": "fab fa-youtube",
         }
     ],
     "photo": "profile-3.webp",
-    "about_me": "Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I was born in april 4<sup>th</sup> 1999 at Cirebon, Indonesia. I am a Backend Web Developer.<br><br>These days I working at Indonesian Traffic Sign detector for my bachelor's assignment, the dataset contains 21 classes with 3 main traffic light (green, yellow, and red).",
+    "about_me": "Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I'm an Informatics Engineering graduate passionate about coding and new technologies, creative, great contributor, loves Artificial Intelligence things, proficient in Web Development and Software Engineering.",
     "hobbies": [
         {
             "img": "coding.webp",
@@ -43,7 +38,7 @@ const data = {
             "img": "music.webp",
             "title": "Photo by Maurice Lourens on Unsplash",
             "heading": "Music",
-            "description": "R&B music, K-POP, Lo-fi, and Pop."
+            "description": "K-KPOP, POP, and RnB."
         },
         {
             "img": "gaming-2.webp",
@@ -54,19 +49,19 @@ const data = {
     ],
     "skills": [
         {
-            "icon": "fas fa-layer-group",
-            "heading": "UI/UX Design",
-            "description": "Figma | Adobe XD"
-        },
-        {
             "icon": "fas fa-laptop-code",
             "heading": "Programming",
-            "description": "Node.js | PHP | Java | MongoDB | MySQL"
+            "description": "Javascript, PHP, Java, Node.js, Express.js, React.js, Laravel, MongoDB, MySQL"
+        },
+        {
+            "icon": "fas fa-layer-group",
+            "heading": "UI/UX Design",
+            "description": "Figma, Adobe XD"
         },
         {
             "icon": "fas fa-bezier-curve",
             "heading": "Others",
-            "description": "Adobe Premiere Pro | Adobe Photoshop | Ms. Word | Ms. Powerpoint"
+            "description": "Adobe Premiere Pro, Adobe Photoshop, Canva, Ms. Word, Ms. Powerpoint"
         },
     ],
     "portfolio": [
@@ -158,33 +153,49 @@ const data = {
                 },
             ]
         },
-        // {
-        //     "img": "gawedong.webp",
-        //     "heading": "GaweDong",
-        //     "description": "Desain UI/UX aplikasi Job Seeker, partisipan lomba Codig 3.0 UMB 2020",
-        //     "link": "https://www.behance.net/gallery/115463817/UI-Design-GaweDong"
-        // },
     ],
     "history": {
         "educations": [
             {
-                "date": "August 2017 - Present",
-                "description": "Informatics Engineering at Pasundan University, Bandung"
+                "date": "August 2017 - August 2021",
+                "description": "Bachelor of Informatics Engineering, Pasundan University, Bandung",
+                "details": [
+                    "GPA: 3,71 of 4,00",
+                    "Thesis: Created Indonesian Traffic Sign Dataset and implemented using Deep Learning Algorithm You Only Look Once",
+                ]
             },
-            {
-                "date": "July 2014 - May 2017",
-                "description": "National Highschool 2, Cirebon"
-            }
         ],
         "experiences": [
             {
-                "date": "March 2020 - Present",
-                "description": "Coordinator Lab. Assistant at Informatics Engineering at Pasundan University Bandung"
+                "date": "September 2019 - February 2021",
+                "description": "Laboratory Assistant of Informatics Engineering Department, Pasundan University, Bandung",
+                "details": [
+                    "Teach topics such as Web Programming, Object-Oriented Programming, and Data Structure Concepts",
+                    "Coordinator Laboratory Assistant of Object-Oriented Programming and Mobile Application System Subjects",
+                ]
+            }
+        ],
+        "seminars": [
+            {
+                "date": "August 2021",
+                "description": "\"Workipedia Class Spill The Tech.\" By Ziliun & Telkomsel",
             },
             {
-                "date": "September 2019 - Present",
-                "description": "Laboratory Assistant at Informatics Engineering at Pasundan University, Bandung"
-            }
+                "date": "December 2019",
+                "description": "\"Sosialisasi Penerapan Peraturan IMEI.\" By Kementerian Komunikasi dan Informatika",
+            },
+            {
+                "date": "October 2019",
+                "description": "\"Success Mindset Seminar 5.\" By Dinasti Motekar Academy",
+            },
+            {
+                "date": "November 2018",
+                "description": "\"The Arts of Modern Hardware for E-Sports and Creative Industry.\" By Pasundan University, Bandung",
+            },
+            {
+                "date": "April 2018",
+                "description": "\"Seminar Pendidikan Anti Narkoba: Generasi Sehat, Bebas Narkoba.\" By Badan Narkotika Nasional",
+            },
         ]
     }
 }

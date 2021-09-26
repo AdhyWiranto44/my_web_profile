@@ -87,8 +87,8 @@
             </div>
             
             <div class="col-md-6 offset-lg-1 jumbotronTitle">
-                <small class="mb-0">Hello,</small>
-                <h1>I Am <%= data.nickname %></h1>
+                <small class="mb-0">Hello, my name is</small>
+                <h1><%= data.full_name %></h1>
                 <p class="mb-2 font-weight-lighter"><%= data.job %></p>
                 <% data.social_media.forEach(socmed => { %>
                     <a href="<%= socmed.link %>" class="h4 mx-1 text-secondary" title="<%= socmed.title %>"><i class="<%= socmed.icon %>"></i></a>    
@@ -236,24 +236,45 @@
                 <div class="card bg-0 border-0 shadow" style="border-radius: 30px;">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-md my-3" data-aos="fade-right" data-aos-delay="500">
+                      <div class="col-md-6 my-3" data-aos="fade-right" data-aos-delay="500">
                         <h5 class="text-center mb-3">Education</h5>
                         <ul class="timeline position-relative">
                             <% data.history.educations.forEach(education => { %>
                                 <li class="list-unstyled pl-3">
-                                    <h6><%= education.date %></h6>
-                                    <p><%= education.description %></p>
+                                    <small><%= education.date %></small>
+                                    <p class="font-weight-bold mb-0"><%= education.description %></p>
+                                    <ul>
+                                        <% education.details.forEach(detail => { %>
+                                            <li><%= detail %></li>
+                                        <% }) %>
+                                    </ul>
+                                </li>
+                            <% }) %>
+                        </ul>
+                      </div>
+                      <div class="col-md-6 my-3" data-aos="fade-left" data-aos-delay="500">
+                        <h5 class="text-center mb-3">Work Experience</h5>
+                        <ul class="timeline position-relative">
+                            <% data.history.experiences.forEach(experience => { %>
+                                <li class="list-unstyled pl-3">
+                                    <small><%= experience.date %></small>
+                                    <p class="font-weight-bold mb-0"><%= experience.description %></p>
+                                    <ul>
+                                        <% experience.details.forEach(detail => { %>
+                                            <li><%= detail %></li>
+                                        <% }) %>
+                                    </ul>
                                 </li>
                             <% }) %>
                         </ul>
                       </div>
                       <div class="col-md my-3" data-aos="fade-left" data-aos-delay="500">
-                        <h5 class="text-center mb-3">Work Experience</h5>
+                        <h5 class="text-center mb-3">Seminars</h5>
                         <ul class="timeline position-relative">
-                            <% data.history.experiences.forEach(experience => { %>
+                            <% data.history.seminars.forEach(seminar => { %>
                                 <li class="list-unstyled pl-3">
-                                    <h6><%= experience.date %></h6>
-                                    <p><%= experience.description %></p>
+                                    <small><%= seminar.date %></small>
+                                    <p><%= seminar.description %></p>
                                 </li>
                             <% }) %>
                         </ul>
@@ -309,23 +330,32 @@
             <div class="row pb-3">
                 <div class="col-md-3 mb-3">
                     <h6 class="mb-2">Contributions</h6>
-                    <a class="d-block" href="https://drive.google.com/drive/folders/1WKvKRcrMdh7_JgOnMgWJJNn8xLs0h8-b?usp=sharing">Indonesian Traffic Sign Dataset</a>
+                    <ul>
+                        <li><a class="small d-block" href="https://github.com/bellshade">Bellshade</a></li>
+                        <li><a class="small d-block" href="https://github.com/AdhyWiranto44/object-detection-indonesian-traffic-signs-using-yolo-algorithm">Object Detection Indonesian Traffic Signs Using YOLO Algorithm</a></li>
+                    </ul>
                 </div>
                 <div class="col-md-3 mb-3">
                     <h6 class="mb-2">Mini app</h6>
-                    <a class="d-block" href="/miniapp/covid-19">Covid-19 Indonesia</a>
-                    <a class="d-block" href="/miniapp/weather">Weather</a>
+                    <ul>
+                        <li><a class="small d-block" href="/miniapp/covid-19">Covid-19 Indonesia</a></li>
+                        <li><a class="small d-block" href="/miniapp/weather">Weather</a></li>
+                    </ul>
                 </div>
                 <div class="col-md-3 mb-3">
                     <h6 class="mb-2">This template</h6>
-                    <a class="d-block" href="https://github.com/AdhyWiranto44/web-profile-template/">Github</a>
+                    <ul>
+                        <li><a class="small d-block" href="https://github.com/AdhyWiranto44/web-profile-template/">Github</a></li>
+                    </ul>
                 </div>
                 <div class="col-md-3 mb-3">
                     <h6 class="mb-2">Made with</h6>
-                    <a class="d-block" href="https://mongodb.org/">MongoDB</a>
-                    <a class="d-block" href="https://expressjs.com/">Express.js</a>
-                    <a class="d-block" href="https://getbootstrap.com/">Bootstrap</a>
-                    <a class="d-block" href="https://nodejs.org/en/">Node.js</a>
+                    <ul>
+                        <li><a class="small d-block" href="https://mongodb.org/">MongoDB</a></li>
+                        <li><a class="small d-block" href="https://expressjs.com/">Express.js</a></li>
+                        <li><a class="small d-block" href="https://getbootstrap.com/">Bootstrap</a></li>
+                        <li><a class="small d-block" href="https://nodejs.org/en/">Node.js</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="row pt-3 border-top border-light">
