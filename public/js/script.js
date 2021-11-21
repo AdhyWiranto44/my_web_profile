@@ -107,3 +107,13 @@ if (hours > 4 && hours < 16) {
 function openNavMenu(x) {
     x.classList.toggle("change");
 }
+
+// Ganti style hamburger menu saat link navbar diklik
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+        openNavMenu(navMenu);
+    });
+});
