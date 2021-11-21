@@ -1,5 +1,5 @@
 /* Font faces */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 @font-face {
     font-family: "Segoe UI";
@@ -65,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ p {
 
 p,
 a, button, small {
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
 }
 
 img {
