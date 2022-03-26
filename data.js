@@ -2,7 +2,7 @@ const data = {
     "web_icon": "icon-3.webp",
     "nickname": "Adhy",
     "full_name": "Adhy Wiranto",
-    "job": "Web Developer | Machine Learning Enthusiast",
+    "job": "Web Developer | Technology Enthusiast",
     "social_media": [
         {
             "link": "https://www.linkedin.com/in/adhy-wiranto-665882155/",
@@ -25,7 +25,7 @@ const data = {
             "icon": "fab fa-behance-square",
         }
     ],
-    "photo": "profile-3.webp",
+    "photo": "profile-4.webp",
     "about_me": "Hello, my name is Adhy Wiranto Sudjana, my friends called me Adhy. I'm an Informatics Engineering graduate passionate about coding and new technologies, creative, great contributor, loves Artificial Intelligence things, proficient in Web Development and Software Engineering.",
     "hobbies": [
         {
@@ -38,20 +38,20 @@ const data = {
             "img": "music.webp",
             "title": "Photo by Maurice Lourens on Unsplash",
             "heading": "Music",
-            "description": "K-KPOP, POP, and RnB."
+            "description": "POP and RnB."
         },
         {
             "img": "gaming-2.webp",
             "title": "Photo by Ammar ABU-ZAiD on Unsplash",
             "heading": "Gaming",
-            "description": "Minecraft and other casual games"
+            "description": "Simulator Games"
         },
     ],
     "skills": [
         {
             "icon": "fas fa-laptop-code",
             "heading": "Programming",
-            "description": "Javascript, PHP, Java, Node.js, Express.js, React.js, Laravel, MongoDB, MySQL"
+            "description": "Node JS, Javascript, Laravel, Java, Python, Next JS, MongoDB, MySQL"
         },
         {
             "icon": "fas fa-layer-group",
