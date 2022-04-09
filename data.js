@@ -66,10 +66,32 @@ const data = {
     ],
     "portfolio": [
         {
+            "img": "moneytory.webp",
+            "heading": "Moneytory",
+            "year": "2022",
+            "description": "Moneytory adalah aplikasi berbasis website yang diperuntukan untuk oleh Usaha Mikro Kecil Menengah (UMKM) untuk mengelola inventory dan keuangan.",
+            "link": "https://moneytory.000webhostapp.com/",
+            "technology": [
+                {
+                    "title": "Laravel",
+                    "icon": "fab fa-php"
+                },
+                {
+                    "title": "MongoDB",
+                    "icon": "fas fa-database"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+            ]
+        },
+        {
             "img": "findmyhobby.webp",
             "heading": "Find My Hobby",
+            "year": "2021",
             "description": "Find My Hobby merupakan website yang berisi daftar hobi dan rekomendasi hobi yang banyak digemari orang-orang.",
-            "link": "http://findmyhobby.adhywiranto.xyz/",
+            "link": "http://findmyhobby.herokuapp.com/",
             "technology": [
                 {
                     "title": "Node js",
@@ -88,6 +110,7 @@ const data = {
         {
             "img": "openblog.webp",
             "heading": "Open Blog",
+            "year": "2021",
             "description": "Open-Blog merupakan projek website blogging open-source untuk keperluan pribadi atau komersial.",
             "link": "http://github.com/AdhyWiranto44/open-blog/",
             "technology": [
@@ -108,8 +131,9 @@ const data = {
         {
             "img": "twiceapi.webp",
             "heading": "TWICE API",
+            "year": "2021",
             "description": "API yang menyediakan informasi seputar TWICE seperti member dan album",
-            "link": "http://twice-api.adhywiranto.xyz/",
+            "link": "http://twice-api-server.herokuapp.com/",
             "technology": [
                 {
                     "title": "Node js",
@@ -124,6 +148,7 @@ const data = {
         {
             "img": "ikasma3bdg.webp",
             "heading": "IKASMA3BDG",
+            "year": "2020",
             "description": "Web yang berisi data para alumni dengan fitur berita, forum bisnis, dan komunitas.",
             "link": "https://ikasma3bdg.com",
             "technology": [
@@ -140,6 +165,7 @@ const data = {
         {
             "img": "sound.webp",
             "heading": "SOUND",
+            "year": "2019",
             "description": "Website E-Commerce CRUD yang menjual headphone dan earphone.",
             "link": "https://github.com/AdhyWiranto44/sound",
             "technology": [
