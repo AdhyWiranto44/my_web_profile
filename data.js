@@ -91,8 +91,16 @@ const data = {
             "heading": "Find My Hobby",
             "year": "2021",
             "description": "Find My Hobby merupakan website yang berisi daftar hobi dan rekomendasi hobi yang banyak digemari orang-orang.",
-            "link": "http://findmyhobby.herokuapp.com/",
+            "link": "https://github.com/AdhyWiranto44/find-my-hobby",
             "technology": [
+                {
+                    "title": "React JS",
+                    "icon": "fab fa-react"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
                 {
                     "title": "Node js",
                     "icon": "fab fa-node-js"
@@ -100,10 +108,6 @@ const data = {
                 {
                     "title": "MongoDB",
                     "icon": "fas fa-database"
-                },
-                {
-                    "title": "Bootstrap",
-                    "icon": "fab fa-bootstrap"
                 },
             ]
         },
@@ -115,16 +119,20 @@ const data = {
             "link": "http://github.com/AdhyWiranto44/open-blog/",
             "technology": [
                 {
+                    "title": "React JS",
+                    "icon": "fab fa-react"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "fab fa-bootstrap"
+                },
+                {
                     "title": "Node js",
                     "icon": "fab fa-node-js"
                 },
                 {
                     "title": "MongoDB",
                     "icon": "fas fa-database"
-                },
-                {
-                    "title": "Bootstrap",
-                    "icon": "fab fa-bootstrap"
                 },
             ]
         },
